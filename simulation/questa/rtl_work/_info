@@ -1,0 +1,187 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/simulation/questa
+vascii_char
+Z1 !s110 1747189932
+!i10b 1
+!s100 RFlMGgkB5=3_o[02Y[HC01
+IRG`c6>HEiz1]Sd:S1`8@F1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1747188603
+8C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v
+FC:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1747189932.000000
+!s107 C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src|C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src
+Z7 tCvgOpt 0
+vchar_rom
+Z8 !s110 1747189933
+!i10b 1
+!s100 c?ZF5m07gIlV?NJk8`?C^3
+ILB6UCD?=?>XFCZkURVISm1
+R2
+R0
+Z9 w1741664110
+8C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v
+FC:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1747189933.000000
+!s107 C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src|C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v|
+!i113 1
+R5
+R6
+R7
+vclock50_25
+R1
+!i10b 1
+!s100 akzA=:@:kc9k3nLB^<Bk93
+I_Fa7YF@CZGUaAgmcQ_Kbc3
+R2
+R0
+R9
+8C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/clock50_25.v
+FC:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/clock50_25.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/clock50_25.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src|C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/clock50_25.v|
+!i113 1
+R5
+R6
+R7
+vscreen_ram
+R1
+!i10b 1
+!s100 MJ6@^2o;[=hOM8PQ>o6TE0
+IY<mFQh5d_5WX?;EnOGCKD2
+R2
+R0
+w1747189093
+8C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v
+FC:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src|C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v|
+!i113 1
+R5
+R6
+R7
+vSwitchVGA
+R1
+!i10b 1
+!s100 5g7[Ed4DdTNTBF[`<I_hU1
+I;o`ngG[SmhGX@bHEddj?L3
+R2
+R0
+w1747188524
+8C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v
+FC:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src|C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v|
+!i113 1
+R5
+R6
+R7
+n@switch@v@g@a
+vto_ascii
+R8
+!i10b 1
+!s100 D56lN7jgT_^ObQ_TDmRSd3
+IFKaFNjJnf[B_MFMGde=:`3
+R2
+R0
+w1747188147
+8C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/to_ascii.v
+FC:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/to_ascii.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/to_ascii.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src|C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/to_ascii.v|
+!i113 1
+R5
+R6
+R7
+vtop_vga_display
+R1
+!i10b 1
+!s100 Ed3@cF8RZ7AnRL1Sf^_i<2
+I9PM[VEn`O]1Jd>9g4_4;e3
+R2
+R0
+w1747188599
+8C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v
+FC:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src|C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v|
+!i113 1
+R5
+R6
+R7
+vvga_controller
+R1
+!i10b 1
+!s100 Ga^N=OVcXU0Yelf@ki<Uj2
+I`]@_zi@QZ;J>_dPbMj;332
+R2
+R0
+R9
+8C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/vga_controller.v
+FC:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/vga_controller.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/vga_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src|C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/vga_controller.v|
+!i113 1
+R5
+R6
+R7
