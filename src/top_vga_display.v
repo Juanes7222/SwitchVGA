@@ -30,7 +30,7 @@ module top_vga_display(
 		
 	
 	screen_ram screen_ram(
-		.address(8'd2449),
+		.address({y[8:4], x[9:3]}),
 		.we(1'b1),
 		.data_write(ascii),
 		.data(ascii_data)

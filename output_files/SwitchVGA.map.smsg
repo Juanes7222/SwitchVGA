@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at screen_ram.v(31): always construct contains both blocking and non-blocking assignments File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 31
+Warning (10268): Verilog HDL information at screen_ram.v(32): always construct contains both blocking and non-blocking assignments File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32

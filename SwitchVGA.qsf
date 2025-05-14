@@ -54,7 +54,6 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name VERILOG_FILE src/vga_controller.v
 set_global_assignment -name VERILOG_FILE src/clock50_25.v
 set_global_assignment -name VERILOG_FILE src/char_rom_file.v
-set_global_assignment -name VERILOG_FILE src/char_rom.v
 set_global_assignment -name VERILOG_FILE src/ascii_test.v
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85

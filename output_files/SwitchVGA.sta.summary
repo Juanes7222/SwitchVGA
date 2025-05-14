@@ -3,99 +3,99 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'vga_controller:vga|clock50_25:c|state[0]'
-Slack : -5.369
-TNS   : -106.098
+Slack : -4.734
+TNS   : -94.643
 
 Type  : Slow 1100mV 85C Model Setup 'clk_fpga'
-Slack : -2.856
-TNS   : -55.141
+Slack : -2.602
+TNS   : -50.020
 
 Type  : Slow 1100mV 85C Model Hold 'clk_fpga'
-Slack : 0.331
+Slack : 0.429
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'vga_controller:vga|clock50_25:c|state[0]'
-Slack : 3.055
+Slack : 2.483
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_fpga'
 Slack : -0.394
-TNS   : -12.030
+TNS   : -14.854
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'vga_controller:vga|clock50_25:c|state[0]'
 Slack : -0.394
-TNS   : -10.243
+TNS   : -10.562
 
 Type  : Slow 1100mV 0C Model Setup 'vga_controller:vga|clock50_25:c|state[0]'
-Slack : -5.485
-TNS   : -107.828
+Slack : -4.883
+TNS   : -96.761
 
 Type  : Slow 1100mV 0C Model Setup 'clk_fpga'
-Slack : -2.496
-TNS   : -47.870
+Slack : -2.302
+TNS   : -43.156
 
 Type  : Slow 1100mV 0C Model Hold 'clk_fpga'
-Slack : 0.308
+Slack : 0.302
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'vga_controller:vga|clock50_25:c|state[0]'
-Slack : 3.191
+Slack : 2.640
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_fpga'
 Slack : -0.394
-TNS   : -13.136
+TNS   : -13.640
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'vga_controller:vga|clock50_25:c|state[0]'
 Slack : -0.394
-TNS   : -10.198
+TNS   : -10.461
 
 Type  : Fast 1100mV 85C Model Setup 'vga_controller:vga|clock50_25:c|state[0]'
-Slack : -2.814
-TNS   : -56.123
+Slack : -2.364
+TNS   : -47.156
 
 Type  : Fast 1100mV 85C Model Setup 'clk_fpga'
-Slack : -2.353
-TNS   : -41.568
+Slack : -2.020
+TNS   : -38.713
 
 Type  : Fast 1100mV 85C Model Hold 'clk_fpga'
-Slack : 0.185
+Slack : 0.214
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'vga_controller:vga|clock50_25:c|state[0]'
-Slack : 1.808
+Slack : 1.354
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_fpga'
-Slack : -0.082
-TNS   : -1.813
+Slack : -0.393
+TNS   : -10.250
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'vga_controller:vga|clock50_25:c|state[0]'
-Slack : 0.148
+Slack : 0.098
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'vga_controller:vga|clock50_25:c|state[0]'
-Slack : -2.734
-TNS   : -54.208
+Slack : -2.293
+TNS   : -45.696
 
 Type  : Fast 1100mV 0C Model Setup 'clk_fpga'
-Slack : -1.826
-TNS   : -31.734
+Slack : -1.574
+TNS   : -30.074
 
 Type  : Fast 1100mV 0C Model Hold 'clk_fpga'
-Slack : 0.169
+Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'vga_controller:vga|clock50_25:c|state[0]'
-Slack : 1.810
+Slack : 1.379
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_fpga'
-Slack : -0.079
-TNS   : -1.777
+Slack : -0.432
+TNS   : -12.465
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'vga_controller:vga|clock50_25:c|state[0]'
-Slack : 0.151
+Slack : 0.106
 TNS   : 0.000
 
 ------------------------------------------------------------

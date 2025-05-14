@@ -4,7 +4,7 @@ module char_rom (
 );
 
     // Tamaño del ROM (4096 caracteres x 16 líneas por carácter)
-    reg [7:0] rom [0:4095]; // ROM de 4096 caracteres y 16 líneas cada uno
+    (* ramstyle = "block" *) reg [7:0] rom [0:4095]; // ROM de 4096 caracteres y 16 líneas cada uno
 
     initial begin
       $readmemh("charRomF.hex", rom); // Cargar el archivo .hex en el ROM

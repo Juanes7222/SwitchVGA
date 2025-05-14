@@ -4,9 +4,10 @@ module screen_ram (
 	 input [7:0] data_write,
     output reg [7:0] data      // Código ASCII del carácter
 );
-    (* ramstyle = "M10K" *) reg [7:0] screenRam [0:4095];
+    (* ramstyle = "block" *) reg [7:0] screenRam [0:4095];
 	 
 	 initial begin
+		$readmemh("screen_ram.hex", screenRam);
        screenRam[2431] = "V";
 		 screenRam[2432] = "a";
 		 screenRam[2433] = "l";
@@ -29,7 +30,7 @@ module screen_ram (
 	 
 	 always @* begin
 		if (we) begin
-			screenRam[address] <= data_write;
+			screenRam[2449] <= data_write;
 		end
 			
 		data = screenRam[address];

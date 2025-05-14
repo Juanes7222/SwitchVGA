@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SwitchVGA
-Tue May 13 21:18:19 2025
+Wed May 14 11:44:01 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 13 21:18:19 2025          ;
+; Analysis & Synthesis Status     ; Successful - Wed May 14 11:44:01 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; SwitchVGA                                      ;
 ; Top-level Entity Name           ; SwitchVGA                                      ;
@@ -177,15 +177,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+---------------------------------------------+---------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                                   ; File Name with Absolute Path                                              ; Library ;
 +----------------------------------+-----------------+---------------------------------------------+---------------------------------------------------------------------------+---------+
-; src/vga_controller.v             ; yes             ; User Verilog HDL File                       ; C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/vga_controller.v  ;         ;
-; src/clock50_25.v                 ; yes             ; User Verilog HDL File                       ; C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/clock50_25.v      ;         ;
-; src/char_rom_file.v              ; yes             ; User Verilog HDL File                       ; C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v   ;         ;
-; src/ascii_test.v                 ; yes             ; User Verilog HDL File                       ; C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v      ;         ;
-; src/screen_ram.v                 ; yes             ; User Verilog HDL File                       ; C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v      ;         ;
-; src/SwitchVGA.v                  ; yes             ; User Verilog HDL File                       ; C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v       ;         ;
-; src/top_vga_display.v            ; yes             ; User Verilog HDL File                       ; C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v ;         ;
-; src/to_ascii.v                   ; yes             ; User Verilog HDL File                       ; C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/to_ascii.v        ;         ;
-; src/charromf.hex                 ; yes             ; Auto-Found Hexadecimal (Intel-Format) File  ; C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/charromf.hex      ;         ;
+; src/vga_controller.v             ; yes             ; User Verilog HDL File                       ; C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/vga_controller.v  ;         ;
+; src/clock50_25.v                 ; yes             ; User Verilog HDL File                       ; C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/clock50_25.v      ;         ;
+; src/char_rom_file.v              ; yes             ; User Verilog HDL File                       ; C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v   ;         ;
+; src/ascii_test.v                 ; yes             ; User Verilog HDL File                       ; C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v      ;         ;
+; src/screen_ram.v                 ; yes             ; User Verilog HDL File                       ; C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v      ;         ;
+; src/SwitchVGA.v                  ; yes             ; User Verilog HDL File                       ; C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v       ;         ;
+; src/top_vga_display.v            ; yes             ; User Verilog HDL File                       ; C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v ;         ;
+; src/to_ascii.v                   ; yes             ; User Verilog HDL File                       ; C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/to_ascii.v        ;         ;
+; src/charromf.hex                 ; yes             ; Auto-Found Hexadecimal (Intel-Format) File  ; C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/charromf.hex      ;         ;
+; src/screen_ram.hex               ; yes             ; Auto-Found Hexadecimal (Intel-Format) File  ; C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.hex    ;         ;
 +----------------------------------+-----------------+---------------------------------------------+---------------------------------------------------------------------------+---------+
 
 
@@ -272,19 +273,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "top_vga_display:display|screen_ram:screen_ram"                                                                                                            ;
-+---------------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port          ; Type  ; Severity ; Details                                                                                                                                           ;
-+---------------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; address       ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "address[11..8]" will be connected to GND. ;
-; address[6..5] ; Input ; Info     ; Stuck at GND                                                                                                                                      ;
-; address[3..1] ; Input ; Info     ; Stuck at GND                                                                                                                                      ;
-; address[11]   ; Input ; Info     ; Stuck at VCC                                                                                                                                      ;
-; address[8]    ; Input ; Info     ; Stuck at VCC                                                                                                                                      ;
-; address[4]    ; Input ; Info     ; Stuck at VCC                                                                                                                                      ;
-; we            ; Input ; Info     ; Stuck at VCC                                                                                                                                      ;
-+---------------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "top_vga_display:display|screen_ram:screen_ram" ;
++------+-------+----------+-------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                         ;
++------+-------+----------+-------------------------------------------------+
+; we   ; Input ; Info     ; Stuck at VCC                                    ;
++------+-------+----------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -338,95 +333,109 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue May 13 21:18:15 2025
+    Info: Processing started: Wed May 14 11:42:49 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SwitchVGA -c SwitchVGA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file src/vga_controller.v
-    Info (12023): Found entity 1: vga_controller File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/vga_controller.v Line: 1
+    Info (12023): Found entity 1: vga_controller File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/vga_controller.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/clock50_25.v
-    Info (12023): Found entity 1: clock50_25 File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/clock50_25.v Line: 1
+    Info (12023): Found entity 1: clock50_25 File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/clock50_25.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/char_rom_file.v
-    Info (12023): Found entity 1: char_rom File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v Line: 1
-Warning (10335): Unrecognized synthesis attribute "rom_style" at src/char_rom.v(27) File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom.v Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file src/char_rom.v
-    Info (12023): Found entity 1: ascii_rom File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom.v Line: 22
+    Info (12023): Found entity 1: char_rom File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/ascii_test.v
-    Info (12023): Found entity 1: ascii_char File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v Line: 1
+    Info (12023): Found entity 1: ascii_char File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/screen_ram.v
-    Info (12023): Found entity 1: screen_ram File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 1
+    Info (12023): Found entity 1: screen_ram File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/switchvga.v
-    Info (12023): Found entity 1: SwitchVGA File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 1
-Warning (10229): Verilog HDL Expression warning at top_vga_display.v(33): truncated literal to match 8 bits File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v Line: 33
+    Info (12023): Found entity 1: SwitchVGA File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/top_vga_display.v
-    Info (12023): Found entity 1: top_vga_display File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v Line: 1
+    Info (12023): Found entity 1: top_vga_display File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/to_ascii.v
-    Info (12023): Found entity 1: to_ascii File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/to_ascii.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at top_vga_display.v(20): created implicit net for "reset" File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v Line: 20
+    Info (12023): Found entity 1: to_ascii File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/to_ascii.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at top_vga_display.v(20): created implicit net for "reset" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v Line: 20
 Info (12127): Elaborating entity "SwitchVGA" for the top level hierarchy
-Info (12128): Elaborating entity "top_vga_display" for hierarchy "top_vga_display:display" File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 25
-Info (12128): Elaborating entity "ascii_char" for hierarchy "top_vga_display:display|ascii_char:ascii_char" File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v Line: 24
-Warning (10230): Verilog HDL assignment warning at ascii_test.v(24): truncated value with size 12 to match size of target (11) File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v Line: 24
-Info (12128): Elaborating entity "char_rom" for hierarchy "top_vga_display:display|ascii_char:ascii_char|char_rom:rom" File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v Line: 21
-Warning (10850): Verilog HDL warning at char_rom_file.v(10): number of words (2020) in memory file does not match the number of elements in the address range [0:4095] File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v Line: 10
-Warning (10030): Net "rom.data_a" at char_rom_file.v(7) has no driver or initial value, using a default initial value '0' File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v Line: 7
-Warning (10030): Net "rom.waddr_a" at char_rom_file.v(7) has no driver or initial value, using a default initial value '0' File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v Line: 7
-Warning (10030): Net "rom.we_a" at char_rom_file.v(7) has no driver or initial value, using a default initial value '0' File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v Line: 7
-Info (12128): Elaborating entity "to_ascii" for hierarchy "top_vga_display:display|to_ascii:to_ascii" File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v Line: 29
-Info (12128): Elaborating entity "screen_ram" for hierarchy "top_vga_display:display|screen_ram:screen_ram" File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v Line: 37
-Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:vga" File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 36
-Info (12128): Elaborating entity "clock50_25" for hierarchy "vga_controller:vga|clock50_25:c" File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/vga_controller.v Line: 27
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "top_vga_display" for hierarchy "top_vga_display:display" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 25
+Info (12128): Elaborating entity "ascii_char" for hierarchy "top_vga_display:display|ascii_char:ascii_char" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v Line: 24
+Warning (10230): Verilog HDL assignment warning at ascii_test.v(24): truncated value with size 12 to match size of target (11) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v Line: 24
+Info (12128): Elaborating entity "char_rom" for hierarchy "top_vga_display:display|ascii_char:ascii_char|char_rom:rom" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v Line: 21
+Warning (10306): Invalid value "block" for synthesis attribute "ramstyle" at src/char_rom_file.v(7) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v Line: 7
+Warning (10850): Verilog HDL warning at char_rom_file.v(10): number of words (2020) in memory file does not match the number of elements in the address range [0:4095] File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v Line: 10
+Warning (10030): Net "rom.data_a" at char_rom_file.v(7) has no driver or initial value, using a default initial value '0' File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v Line: 7
+Warning (10030): Net "rom.waddr_a" at char_rom_file.v(7) has no driver or initial value, using a default initial value '0' File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v Line: 7
+Warning (10030): Net "rom.we_a" at char_rom_file.v(7) has no driver or initial value, using a default initial value '0' File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v Line: 7
+Info (12128): Elaborating entity "to_ascii" for hierarchy "top_vga_display:display|to_ascii:to_ascii" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v Line: 29
+Info (12128): Elaborating entity "screen_ram" for hierarchy "top_vga_display:display|screen_ram:screen_ram" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v Line: 37
+Warning (10306): Invalid value "block" for synthesis attribute "ramstyle" at src/screen_ram.v(7) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 7
+Warning (10999): Verilog HDL warning at screen_ram.v(7): can't infer memory for variable 'screenRam' with attribute '"block"'. File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 7
+Info (10041): Inferred latch for "screenRam[2449][0]" at screen_ram.v(32) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
+Info (10041): Inferred latch for "screenRam[2449][1]" at screen_ram.v(32) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
+Info (10041): Inferred latch for "screenRam[2449][2]" at screen_ram.v(32) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
+Info (10041): Inferred latch for "screenRam[2449][3]" at screen_ram.v(32) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
+Info (10041): Inferred latch for "screenRam[2449][4]" at screen_ram.v(32) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
+Info (10041): Inferred latch for "screenRam[2449][5]" at screen_ram.v(32) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
+Info (10041): Inferred latch for "screenRam[2449][6]" at screen_ram.v(32) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
+Info (10041): Inferred latch for "screenRam[2449][7]" at screen_ram.v(32) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
+Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:vga" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 36
+Info (12128): Elaborating entity "clock50_25" for hierarchy "vga_controller:vga|clock50_25:c" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/vga_controller.v Line: 27
+Warning (14026): LATCH primitive "top_vga_display:display|screen_ram:screen_ram|screenRam[2449][1]_32808" is permanently enabled File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
+Warning (14026): LATCH primitive "top_vga_display:display|screen_ram:screen_ram|screenRam[2449][2]_32814" is permanently enabled File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
+Warning (14026): LATCH primitive "top_vga_display:display|screen_ram:screen_ram|screenRam[2449][3]_32820" is permanently enabled File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
+Warning (14026): LATCH primitive "top_vga_display:display|screen_ram:screen_ram|screenRam[2449][4]_32826" is permanently enabled File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
+Warning (14026): LATCH primitive "top_vga_display:display|screen_ram:screen_ram|screenRam[2449][5]_32832" is permanently enabled File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
+Warning (14026): LATCH primitive "top_vga_display:display|screen_ram:screen_ram|screenRam[2449][6]_32838" is permanently enabled File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
+Warning (14026): LATCH primitive "top_vga_display:display|screen_ram:screen_ram|screenRam[2449][0]_32802" is permanently enabled File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
-    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
-    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
-    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
-    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
-    Warning (13410): Pin "VGA_R[5]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
-    Warning (13410): Pin "VGA_R[6]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
-    Warning (13410): Pin "VGA_R[7]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
-    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
-    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
-    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
-    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
-    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
-    Warning (13410): Pin "VGA_G[5]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
-    Warning (13410): Pin "VGA_G[6]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
-    Warning (13410): Pin "VGA_G[7]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
-    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
-    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
-    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
-    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
-    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
-    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
-    Warning (13410): Pin "VGA_B[6]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
-    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 9
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
+    Warning (13410): Pin "VGA_R[6]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
+    Warning (13410): Pin "VGA_R[7]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
+    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
+    Warning (13410): Pin "VGA_G[5]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
+    Warning (13410): Pin "VGA_G[6]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
+    Warning (13410): Pin "VGA_G[7]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
+    Warning (13410): Pin "VGA_B[6]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 9
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/output_files/SwitchVGA.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/output_files/SwitchVGA.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "value[0]" File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 2
-    Warning (15610): No output dependent on input pin "value[1]" File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 2
-    Warning (15610): No output dependent on input pin "value[2]" File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 2
-    Warning (15610): No output dependent on input pin "value[3]" File: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 2
+    Warning (15610): No output dependent on input pin "value[0]" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 2
+    Warning (15610): No output dependent on input pin "value[1]" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 2
+    Warning (15610): No output dependent on input pin "value[2]" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 2
+    Warning (15610): No output dependent on input pin "value[3]" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 2
 Info (21057): Implemented 86 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 29 output pins
     Info (21061): Implemented 51 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
-    Info: Peak virtual memory: 4892 megabytes
-    Info: Processing ended: Tue May 13 21:18:19 2025
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:09
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 49 warnings
+    Info: Peak virtual memory: 4918 megabytes
+    Info: Processing ended: Wed May 14 11:44:01 2025
+    Info: Elapsed time: 00:01:12
+    Info: Total CPU time (on all processors): 00:01:19
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/output_files/SwitchVGA.map.smsg.
+The suppressed messages can be found in C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/output_files/SwitchVGA.map.smsg.
 
 
