@@ -1,5 +1,5 @@
 module ascii_char(
-    input video_on,
+    input video_on, clk,
 	 input [7:0] ascii_char,
     input [9:0] x, y,
 	 input reset,

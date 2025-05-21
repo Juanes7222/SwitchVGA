@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SwitchVGA
-Wed May 14 11:44:01 2025
+Wed May 21 14:51:44 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -15,13 +15,15 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
   9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: vga_controller:vga
- 11. Port Connectivity Checks: "top_vga_display:display|screen_ram:screen_ram"
- 12. Port Connectivity Checks: "top_vga_display:display"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
- 16. Analysis & Synthesis Suppressed Messages
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: vga_controller:vga
+ 13. Port Connectivity Checks: "top_vga_display:display|screen_ram:screen_ram"
+ 14. Port Connectivity Checks: "top_vga_display:display|ascii_char:ascii_char"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,13 +50,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 14 11:44:01 2025          ;
+; Analysis & Synthesis Status     ; Successful - Wed May 21 14:51:44 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; SwitchVGA                                      ;
 ; Top-level Entity Name           ; SwitchVGA                                      ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 43                                             ;
+; Total registers                 ; 56                                             ;
 ; Total pins                      ; 35                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
@@ -190,53 +192,59 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+---------------------------------------------+---------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 24          ;
-;                                             ;             ;
-; Combinational ALUT usage for logic          ; 31          ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 2           ;
-;     -- 5 input functions                    ; 3           ;
-;     -- 4 input functions                    ; 4           ;
-;     -- <=3 input functions                  ; 22          ;
-;                                             ;             ;
-; Dedicated logic registers                   ; 43          ;
-;                                             ;             ;
-; I/O pins                                    ; 35          ;
-;                                             ;             ;
-; Total DSP Blocks                            ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 43          ;
-; Total fan-out                               ; 281         ;
-; Average fan-out                             ; 1.95        ;
-+---------------------------------------------+-------------+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                     ;
++---------------------------------------------+-----------------------------------+
+; Resource                                    ; Usage                             ;
++---------------------------------------------+-----------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 230                               ;
+;                                             ;                                   ;
+; Combinational ALUT usage for logic          ; 270                               ;
+;     -- 7 input functions                    ; 29                                ;
+;     -- 6 input functions                    ; 157                               ;
+;     -- 5 input functions                    ; 23                                ;
+;     -- 4 input functions                    ; 26                                ;
+;     -- <=3 input functions                  ; 35                                ;
+;                                             ;                                   ;
+; Dedicated logic registers                   ; 56                                ;
+;                                             ;                                   ;
+; I/O pins                                    ; 35                                ;
+;                                             ;                                   ;
+; Total DSP Blocks                            ; 0                                 ;
+;                                             ;                                   ;
+; Maximum fan-out node                        ; vga_controller:vga|v_count_reg[3] ;
+; Maximum fan-out                             ; 130                               ;
+; Total fan-out                               ; 1686                              ;
+; Average fan-out                             ; 4.26                              ;
++---------------------------------------------+-----------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                              ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name    ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+----------------+--------------+
-; |SwitchVGA                 ; 31 (0)              ; 43 (0)                    ; 0                 ; 0          ; 35   ; 0            ; |SwitchVGA                                 ; SwitchVGA      ; work         ;
-;    |vga_controller:vga|    ; 31 (29)             ; 43 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |SwitchVGA|vga_controller:vga              ; vga_controller ; work         ;
-;       |clock50_25:c|       ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |SwitchVGA|vga_controller:vga|clock50_25:c ; clock50_25     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+----------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                             ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                   ; Entity Name     ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------+--------------+
+; |SwitchVGA                    ; 270 (0)             ; 56 (0)                    ; 0                 ; 0          ; 35   ; 0            ; |SwitchVGA                                                            ; SwitchVGA       ; work         ;
+;    |top_vga_display:display|  ; 241 (0)             ; 13 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |SwitchVGA|top_vga_display:display                                    ; top_vga_display ; work         ;
+;       |ascii_char:ascii_char| ; 218 (4)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SwitchVGA|top_vga_display:display|ascii_char:ascii_char              ; ascii_char      ; work         ;
+;          |char_rom:rom|       ; 214 (214)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SwitchVGA|top_vga_display:display|ascii_char:ascii_char|char_rom:rom ; char_rom        ; work         ;
+;       |screen_ram:screen_ram| ; 18 (18)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |SwitchVGA|top_vga_display:display|screen_ram:screen_ram              ; screen_ram      ; work         ;
+;       |to_ascii:to_ascii|     ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SwitchVGA|top_vga_display:display|to_ascii:to_ascii                  ; to_ascii        ; work         ;
+;    |vga_controller:vga|       ; 29 (27)             ; 43 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |SwitchVGA|vga_controller:vga                                         ; vga_controller  ; work         ;
+;       |clock50_25:c|          ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |SwitchVGA|vga_controller:vga|clock50_25:c                            ; clock50_25      ; work         ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------+
-; Registers Removed During Synthesis                            ;
-+------------------------------------------+--------------------+
-; Register name                            ; Reason for Removal ;
-+------------------------------------------+--------------------+
-; vga_controller:vga|clock50_25:c|state[1] ; Lost fanout        ;
-; Total Number of Removed Registers = 1    ;                    ;
-+------------------------------------------+--------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                              ;
++------------------------------------------------------------------+------------------------------------------------------------------------------+
+; Register name                                                    ; Reason for Removal                                                           ;
++------------------------------------------------------------------+------------------------------------------------------------------------------+
+; top_vga_display:display|screen_ram:screen_ram|screenRam[2485][6] ; Merged with top_vga_display:display|screen_ram:screen_ram|screenRam[2485][5] ;
+; vga_controller:vga|clock50_25:c|state[1]                         ; Lost fanout                                                                  ;
+; Total Number of Removed Registers = 2                            ;                                                                              ;
++------------------------------------------------------------------+------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -244,7 +252,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 43    ;
+; Total registers                              ; 56    ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 42    ;
@@ -252,6 +260,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 10    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------+
+; Inverted Register Statistics                                               ;
++------------------------------------------------------------------+---------+
+; Inverted Register                                                ; Fan out ;
++------------------------------------------------------------------+---------+
+; top_vga_display:display|screen_ram:screen_ram|screenRam[2485][5] ; 2       ;
+; Total number of inverted registers = 1                           ;         ;
++------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; 4096:1             ; 7 bits    ; 19110 LEs     ; 420 LEs              ; 18690 LEs              ; Yes        ; |SwitchVGA|top_vga_display:display|screen_ram:screen_ram|data[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------+
@@ -282,13 +309,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "top_vga_display:display"                                                                                                                        ;
-+----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                                                                                                                      ;
-+----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; video_on ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top_vga_display:display|ascii_char:ascii_char"                                                                                              ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; clk  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -296,25 +323,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 43                          ;
+; arriav_ff             ; 56                          ;
 ;     CLR               ; 22                          ;
 ;     CLR SCLR          ; 10                          ;
 ;     ENA CLR SCLR      ; 10                          ;
-;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 32                          ;
+;     plain             ; 14                          ;
+; arriav_lcell_comb     ; 272                         ;
 ;     arith             ; 20                          ;
 ;         1 data inputs ; 20                          ;
-;     normal            ; 12                          ;
+;     extend            ; 29                          ;
+;         7 data inputs ; 29                          ;
+;     normal            ; 223                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 1                           ;
-;         4 data inputs ; 4                           ;
-;         5 data inputs ; 3                           ;
-;         6 data inputs ; 2                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 26                          ;
+;         5 data inputs ; 23                          ;
+;         6 data inputs ; 157                         ;
 ; boundary_port         ; 35                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.29                        ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 4.89                        ;
 +-----------------------+-----------------------------+
 
 
@@ -333,7 +363,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed May 14 11:42:49 2025
+    Info: Processing started: Wed May 21 14:51:03 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SwitchVGA -c SwitchVGA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -355,7 +385,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file src/to_
     Info (12023): Found entity 1: to_ascii File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/to_ascii.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at top_vga_display.v(20): created implicit net for "reset" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v Line: 20
 Info (12127): Elaborating entity "SwitchVGA" for the top level hierarchy
-Info (12128): Elaborating entity "top_vga_display" for hierarchy "top_vga_display:display" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 25
+Info (12128): Elaborating entity "top_vga_display" for hierarchy "top_vga_display:display" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 27
 Info (12128): Elaborating entity "ascii_char" for hierarchy "top_vga_display:display|ascii_char:ascii_char" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v Line: 24
 Warning (10230): Verilog HDL assignment warning at ascii_test.v(24): truncated value with size 12 to match size of target (11) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v Line: 24
 Info (12128): Elaborating entity "char_rom" for hierarchy "top_vga_display:display|ascii_char:ascii_char|char_rom:rom" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v Line: 21
@@ -365,72 +395,32 @@ Warning (10030): Net "rom.data_a" at char_rom_file.v(7) has no driver or initial
 Warning (10030): Net "rom.waddr_a" at char_rom_file.v(7) has no driver or initial value, using a default initial value '0' File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v Line: 7
 Warning (10030): Net "rom.we_a" at char_rom_file.v(7) has no driver or initial value, using a default initial value '0' File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v Line: 7
 Info (12128): Elaborating entity "to_ascii" for hierarchy "top_vga_display:display|to_ascii:to_ascii" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v Line: 29
-Info (12128): Elaborating entity "screen_ram" for hierarchy "top_vga_display:display|screen_ram:screen_ram" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v Line: 37
-Warning (10306): Invalid value "block" for synthesis attribute "ramstyle" at src/screen_ram.v(7) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 7
-Warning (10999): Verilog HDL warning at screen_ram.v(7): can't infer memory for variable 'screenRam' with attribute '"block"'. File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 7
-Info (10041): Inferred latch for "screenRam[2449][0]" at screen_ram.v(32) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
-Info (10041): Inferred latch for "screenRam[2449][1]" at screen_ram.v(32) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
-Info (10041): Inferred latch for "screenRam[2449][2]" at screen_ram.v(32) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
-Info (10041): Inferred latch for "screenRam[2449][3]" at screen_ram.v(32) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
-Info (10041): Inferred latch for "screenRam[2449][4]" at screen_ram.v(32) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
-Info (10041): Inferred latch for "screenRam[2449][5]" at screen_ram.v(32) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
-Info (10041): Inferred latch for "screenRam[2449][6]" at screen_ram.v(32) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
-Info (10041): Inferred latch for "screenRam[2449][7]" at screen_ram.v(32) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
-Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:vga" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 36
+Info (12128): Elaborating entity "screen_ram" for hierarchy "top_vga_display:display|screen_ram:screen_ram" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v Line: 38
+Warning (10306): Invalid value "block" for synthesis attribute "ramstyle" at src/screen_ram.v(8) File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 8
+Warning (10999): Verilog HDL warning at screen_ram.v(8): can't infer memory for variable 'screenRam' with attribute '"block"'. File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 8
+Warning (10850): Verilog HDL warning at screen_ram.v(11): number of words (5000) in memory file does not match the number of elements in the address range [0:4095] File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 11
+Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:vga" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 38
 Info (12128): Elaborating entity "clock50_25" for hierarchy "vga_controller:vga|clock50_25:c" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/vga_controller.v Line: 27
-Warning (14026): LATCH primitive "top_vga_display:display|screen_ram:screen_ram|screenRam[2449][1]_32808" is permanently enabled File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
-Warning (14026): LATCH primitive "top_vga_display:display|screen_ram:screen_ram|screenRam[2449][2]_32814" is permanently enabled File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
-Warning (14026): LATCH primitive "top_vga_display:display|screen_ram:screen_ram|screenRam[2449][3]_32820" is permanently enabled File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
-Warning (14026): LATCH primitive "top_vga_display:display|screen_ram:screen_ram|screenRam[2449][4]_32826" is permanently enabled File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
-Warning (14026): LATCH primitive "top_vga_display:display|screen_ram:screen_ram|screenRam[2449][5]_32832" is permanently enabled File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
-Warning (14026): LATCH primitive "top_vga_display:display|screen_ram:screen_ram|screenRam[2449][6]_32838" is permanently enabled File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
-Warning (14026): LATCH primitive "top_vga_display:display|screen_ram:screen_ram|screenRam[2449][0]_32802" is permanently enabled File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v Line: 32
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "top_vga_display:display|ascii_char:ascii_char|char_rom:rom|rom" is uninferred due to asynchronous read logic File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v Line: 7
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/db/SwitchVGA.ram0_char_rom_78878f8d.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
-    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
-    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
-    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
-    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
-    Warning (13410): Pin "VGA_R[5]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
-    Warning (13410): Pin "VGA_R[6]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
-    Warning (13410): Pin "VGA_R[7]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 5
-    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
-    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
-    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
-    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
-    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
-    Warning (13410): Pin "VGA_G[5]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
-    Warning (13410): Pin "VGA_G[6]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
-    Warning (13410): Pin "VGA_G[7]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 6
-    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
-    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
-    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
-    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
-    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
-    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
-    Warning (13410): Pin "VGA_B[6]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
-    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 7
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 9
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/output_files/SwitchVGA.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "value[0]" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 2
-    Warning (15610): No output dependent on input pin "value[1]" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 2
-    Warning (15610): No output dependent on input pin "value[2]" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 2
-    Warning (15610): No output dependent on input pin "value[3]" File: C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v Line: 2
-Info (21057): Implemented 86 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 326 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 51 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 49 warnings
-    Info: Peak virtual memory: 4918 megabytes
-    Info: Processing ended: Wed May 14 11:44:01 2025
-    Info: Elapsed time: 00:01:12
-    Info: Total CPU time (on all processors): 00:01:19
+    Info (21061): Implemented 291 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 4924 megabytes
+    Info: Processing ended: Wed May 21 14:51:44 2025
+    Info: Elapsed time: 00:00:41
+    Info: Total CPU time (on all processors): 00:00:47
 
 
 +------------------------------------------+

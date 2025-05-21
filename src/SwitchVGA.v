@@ -16,9 +16,11 @@ module SwitchVGA (
 	wire [9:0] x, y; 
 
 	top_vga_display display(
-		.value(value),		
+		.value(value),
+		.video_on(video_on),
 		.x(x),
 		.y(y),
+		.clk(VGA_CLK),
 		.VGA_R(VGA_R),
 		.VGA_G(VGA_G),
 		.VGA_B(VGA_B)

@@ -1,6 +1,6 @@
 module top_vga_display(
 	input [3:0] value,
-	input video_on,
+	input video_on, clk,
 	input [9:0] x,
 	input [9:0] y,
 	output [7:0] VGA_R,       // Salida del color rojo
@@ -32,6 +32,7 @@ module top_vga_display(
 	screen_ram screen_ram(
 		.address({y[8:4], x[9:3]}),
 		.we(1'b1),
+		.clk(clk),
 		.data_write(ascii),
 		.data(ascii_data)
 	);

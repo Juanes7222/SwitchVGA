@@ -1,94 +1,93 @@
-# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# Reading pref.tcl
 # do SwitchVGA_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
 # vlib rtl_work
 # vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Copying C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src {C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/vga_controller.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:32:12 on May 13,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src" C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/vga_controller.v 
+# vlog -vlog01compat -work work +incdir+C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src {C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/vga_controller.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:34:46 on May 21,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src" C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/vga_controller.v 
 # -- Compiling module vga_controller
 # 
 # Top level modules:
 # 	vga_controller
-# End time: 21:32:12 on May 13,2025, Elapsed time: 0:00:00
+# End time: 14:34:46 on May 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src {C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/clock50_25.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:32:12 on May 13,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src" C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/clock50_25.v 
+# vlog -vlog01compat -work work +incdir+C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src {C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/clock50_25.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:34:46 on May 21,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src" C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/clock50_25.v 
 # -- Compiling module clock50_25
 # 
 # Top level modules:
 # 	clock50_25
-# End time: 21:32:12 on May 13,2025, Elapsed time: 0:00:00
+# End time: 14:34:46 on May 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src {C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:32:12 on May 13,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src" C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v 
+# vlog -vlog01compat -work work +incdir+C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src {C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:34:46 on May 21,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src" C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/ascii_test.v 
 # -- Compiling module ascii_char
 # 
 # Top level modules:
 # 	ascii_char
-# End time: 21:32:12 on May 13,2025, Elapsed time: 0:00:00
+# End time: 14:34:46 on May 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src {C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:32:12 on May 13,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src" C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v 
-# -- Compiling module screen_ram
-# 
-# Top level modules:
-# 	screen_ram
-# End time: 21:32:12 on May 13,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src {C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:32:12 on May 13,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src" C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v 
+# vlog -vlog01compat -work work +incdir+C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src {C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:34:46 on May 21,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src" C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/SwitchVGA.v 
 # -- Compiling module SwitchVGA
 # 
 # Top level modules:
 # 	SwitchVGA
-# End time: 21:32:12 on May 13,2025, Elapsed time: 0:00:00
+# End time: 14:34:46 on May 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src {C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:32:12 on May 13,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src" C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v 
+# vlog -vlog01compat -work work +incdir+C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src {C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:34:47 on May 21,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src" C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v 
 # -- Compiling module top_vga_display
-# ** Warning: C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/top_vga_display.v(33): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	top_vga_display
-# End time: 21:32:12 on May 13,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
-# vlog -vlog01compat -work work +incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src {C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/to_ascii.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:32:12 on May 13,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src" C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/to_ascii.v 
+# End time: 14:34:47 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src {C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/to_ascii.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:34:47 on May 21,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src" C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/to_ascii.v 
 # -- Compiling module to_ascii
 # 
 # Top level modules:
 # 	to_ascii
-# End time: 21:32:13 on May 13,2025, Elapsed time: 0:00:01
+# End time: 14:34:47 on May 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src {C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:32:13 on May 13,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src" C:/Users/juanb/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v 
+# vlog -vlog01compat -work work +incdir+C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src {C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:34:47 on May 21,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src" C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/char_rom_file.v 
 # -- Compiling module char_rom
 # 
 # Top level modules:
 # 	char_rom
-# End time: 21:32:13 on May 13,2025, Elapsed time: 0:00:00
+# End time: 14:34:47 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src {C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:34:47 on May 21,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src" C:/Users/corra/OneDrive/Documentos/GitHub/SwitchVGA/src/screen_ram.v 
+# -- Compiling module screen_ram
+# 
+# Top level modules:
+# 	screen_ram
+# End time: 14:34:47 on May 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
